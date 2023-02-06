@@ -28,7 +28,7 @@ const AppProvider = ({ children }) => {
     }
     return favorites;
   }
-
+  
 
   function addFavorites (idMeal){
     const meal = meals.find((meal)=> meal.idMeal === idMeal );
