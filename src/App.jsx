@@ -8,12 +8,12 @@ import { GlobalContext } from './context/Context';
 
 const App = () => {
   
-  const {showModal} = GlobalContext();
+  const {showModal = false,favorites} = GlobalContext();
 
   return (
     <main>
       <Search />
-      {/* <Favorites /> */}
+      {favorites?.length >0 && <Favorites />}
       <Meals />
       {showModal && <Modal />}
     </main>
